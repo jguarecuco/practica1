@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Tarea} from "../models/tarea.model";
 
 @Component({
   selector: 'app-tarea',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tarea.component.css']
 })
 export class TareaComponent implements OnInit {
-
+ @Input() iTarea ;
   constructor() { }
 
   ngOnInit() {

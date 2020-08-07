@@ -1,3 +1,25 @@
-<p>
-  lista-tareas works!
-</p>
+<div class="container">
+<div class="card">
+  <div class="card-header"><h4 class="card-title text-center justify-content-center align-items-center">Crea una tarea</h4></div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="">Nombre de la tarea</label>
+      <input type="text" class="form-control" placeholder="Ingresa el nombre de la tarea" #nombre>
+
+    </div>
+    <div class="form-group">
+      <label for="">Descripción de la tarea</label>
+      <input type="text" class="form-control" placeholder="Ingresa la descripcion de la tarea" #descripcion>
+    </div>
+
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary btn-block" (click)="CrearTarea(nombre.value,descripcion.value)">Guardar Tarea</button>
+  </div>
+</div>
+<div class="container-fluid">
+<ul class="list-group row flex-row">
+  <li class="list-group-item col-md-4" *ngFor="let tarea of listaTareas"><app-tarea [iTarea]="tarea"></app-tarea></li>
+</ul>
+</div>
+</div>

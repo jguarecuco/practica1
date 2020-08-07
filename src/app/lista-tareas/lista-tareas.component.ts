@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
 import {Tarea} from "../models/tarea.model";
 
 @Component({
@@ -8,12 +8,15 @@ import {Tarea} from "../models/tarea.model";
 })
 export class ListaTareasComponent implements OnInit {
   listaTareas:Tarea[];
-
+  @HostBinding("attr.class") cssClass="container content"
   constructor() {
-    this.listaTareas=[];
+    this.listaTareas=[new Tarea("Prueba", "Esta es la primera tarea mock")];
   }
 
   ngOnInit() {
   }
 
+  CrearTarea(nombre: string, descripcion: string) {
+    this.listaTareas.push(new Tarea(nombre,descripcion));
+  }
 }
