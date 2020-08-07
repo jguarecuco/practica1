@@ -10,7 +10,8 @@ export class ListaTareasComponent implements OnInit {
   listaTareas:Tarea[];
   @HostBinding("attr.class") cssClass="container content"
   constructor() {
-    this.listaTareas=[new Tarea("Prueba", "Esta es la primera tarea mock")];
+    //this.listaTareas=[new Tarea("Prueba", "Esta es la primera tarea mock")];
+    this.listaTareas=[];
   }
 
   ngOnInit() {

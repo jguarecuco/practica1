@@ -2,5 +2,9 @@
 /*Importamos los estilo de Bootstrap en la app*/
 @import "~bootstrap/dist/css/bootstrap.css";
 .container-fluid{
-  margin-top: 20px;
+ margin-top: 20px;
+}
+.list-group-item{
+ padding: 10px;
+  border: 0px #000 solid !important;
 }
